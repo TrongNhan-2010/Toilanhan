@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - TNhanX</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 1.5rem 5rem;
+        }
+        .form-box {
+            background-color: var(--gray);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            border: 1px solid rgba(30, 30, 36, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-box h2 {
+            color: var(--red);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 6px rgba(255, 45, 45, 0.5);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background-color: #111;
+            color: #fff;
+            font-size: 15px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--red);
+            box-shadow: 0 0 0 2px rgba(255, 45, 45, 0.15);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--red);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 0.5rem;
+        }
+        .btn-submit:hover {
+            background-color: rgba(255, 45, 45, 0.9);
+        }
+        .link-text {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--light-gray);
+            font-size: 14px;
+        }
+        .link-text a {
+            color: var(--red);
+            font-weight: 500;
+        }
+        .thongbao {
+            padding: 0.7rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            text-align: center;
+            display: none;
+        }
+        .thanhcong {
+            background-color: rgba(0, 128, 0, 0.2);
+            color: #4cd137;
+            border: 1px solid #27ae60;
+        }
+        .loi {
+            background-color: rgba(255, 0, 0, 0.2);
+            color: #ff7675;
+            border: 1px solid #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">TNhanX</h1>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#service">SERVICE</a>
+                <a href="index.html#project">PROJECT</a>
+                <a href="index.html#skill">SKILL</a>
+                <a href="index.html#contact">CONTACT</a>
+                <a href="dangky.html">ĐĂNG KÝ</a>
+            </div>
+            <button class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="form-container">
+        <div class="form-box">
+            <h2>ĐĂNG NHẬP</h2>
+            <div class="thongbao thanhcong" id="tbThanhcong">✅ Đăng nhập thành công!</div>
+            <div class="thongbao loi" id="tbLoi"></div>
+
+            <form id="formDangnhap">
+                <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" id="tkDangnhap" required placeholder="Nhập tên đăng nhập">
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="mkDangnhap" required placeholder="Nhập mật khẩu">
+                </div>
+                <button type="submit" class="btn-submit">Đăng Nhập</button>
+            </form>
+
+            <div class="link-text">
+                Chưa có tài khoản? <a href="dangky.html">Đăng ký ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const formDangnhap = document.getElementById('formDangnhap');
+        const tbThanhcong = document.getElementById('tbThanhcong');
+        const tbLoi = document.getElementById('tbLoi');
+
+        formDangnhap.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const tk = document.getElementById('tkDangnhap').value.trim();
+            const mk = document.getElementById('mkDangnhap').value.trim();
+
+            tbThanhcong.style.display = 'none';
+            tbLoi.style.display = 'none';
+
+            // Lấy danh sách tài khoản
+            let danhSachTK = JSON.parse(localStorage.getItem('danhSachTaiKhoan')) || [];
+
+            // Tìm tài khoản
+            let taiKhoanHopLe = danhSachTK.find(u => u.tendangnhap === tk && u.matkhau === mk);
+
+            if(taiKhoanHopLe) {
+                // Lưu trạng thái đăng nhập
+                localStorage.setItem('nguoiDangNhap', tk);
+                tbThanhcong.style.display = 'block';
+
+                // Chuyển về trang chủ sau 1.5s
+                setTimeout(() => {
+                    window.location.href = 'NhanTapCode.html';
+                }, 1500);
+            } else {
+                tbLoi.textContent = '❌ Tên đăng nhập hoặc mật khẩu sai!';
+                tbLoi.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
