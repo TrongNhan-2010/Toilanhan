@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         localStorage.removeItem('nguoiDangNhap'); // Xóa trạng thái
         alert('✅ Đã đăng xuất thành công!');
-        window.location.href = 'NhanTapCode.html'; // Tải lại trang
+        window.location.href = 'index.html'; // Tải lại trang
     });
 
     // ===== Tải dữ liệu bài viết khi vào trang chủ =====
@@ -258,3 +258,13 @@ function guiEmailDangKy(tendangnhap, matkhau) {
     // Mở trình gửi email mặc định
     window.open(`mailto:${emailNhan}?subject=${encodeURIComponent(tieuDe)}&body=${encodeURIComponent(noiDung)}`);
 }
+// ===== 13. HIỆU ỨNG MÀN HÌNH CHỜ (PRELOADER) =====
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Đợi thêm 0.5 giây cho hiệu ứng thanh chạy nhìn đẹp mắt rồi ẩn đi
+        setTimeout(function() {
+            preloader.classList.add('fade-out');
+        }, 500);
+    }
+});
