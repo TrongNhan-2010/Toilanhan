@@ -8,18 +8,25 @@
     <script src="script2.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
+<body id="home">
+    <div id="preloader">
+    <div class="preloader-content">
+        <h1 class="preloader-logo">TrNhânX⚡</h1>
+        <div class="preloader-line"></div>
+    </div>
+</div>
+
     <!-- Navbar -->
    <nav>
     <div class="nav-container">
         <h1 class="logo"> TrNhanX⚡</h1>
         <div class="nav-links">
     <a href="#home">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#products">NỔI BẬT</a>
+    <a href="#about-me">ABOUT</a>
+    <a href="#noibat">NỔI BẬT</a>
     <a href="#dienthoai">ĐIỆN THOẠI</a>
     <a href="#thethao">THỂ THAO</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#kynang">KỶ NĂNG</a>
 </div>
 
 
@@ -32,7 +39,7 @@
                 </span>
 
                 <span id="daDangNhap" style="display: none; align-items: center; gap: 1.5rem;">
-                    <a href="canhan.html" style="color: var(--red); font-weight: bold; pointer-events: none;">👤 <span id="tenNguoiDung"></span></a>
+                    <a href="canhan" style="color: var(--red); font-weight: bold; pointer-events: none;"> <span id="tenNguoiDung"></span></a>
                     <a href="#" id="btnDangXuat">ĐĂNG XUẤT</a>
                 </span>
             </div>
@@ -103,7 +110,45 @@
     </section>
 
     <!-- Products Section -->
-    <section class="products">
+<section class="about-me-section"id="about-me">
+    <div class="about-container">
+        
+        <div class="about-image-box">
+            <video autoplay muted loop playsinline>
+                        <source src="videomat3.mp4" type="video/mp4">
+                        Trình duyệt không hỗ trợ video
+                    </video>
+            <span class="experience-badge">0+ Years Experience</span>
+            <div class="image-placeholder"></div>
+        </div>
+
+        <div class="about-content">
+            <h2 class="about-title">About me</h2>
+            <p class="about-text">
+                Chào mọi người, mình là Trọng Nhân. Mình là một người đam mê phát triển trang web và thiết kế sáng tạo, luôn muốn tạo ra những trải nghiệm kỹ thuật số không chỉ đầy đủ tính năng mà còn phải có tính thẩm mỹ cao. Hãy cùng khám phá không gian sáng tạo của mình nhé!
+            </p>
+
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div class="info-details">
+                    <h3>Vị trí của tôi</h3>
+                    <p>Sông Đốc, Cà Mau, Việt Nam </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div class="info-details">
+                    <h3>Số điện thoại</h3>
+                    <p>+84 xxxx xxx xxx</p> </div>
+            </div>
+
+            <a href="#" class="download-cv-btn">Download CV</a>
+        </div>
+
+    </div>
+</section>
+    <section class="products"id="noibat">
         <h2 class="title-featured">Sản phẩm nổi bật</h2>
 
         <div class="products-container">
@@ -138,6 +183,308 @@
             </div>
         </div>
     </section>
+ <section class="products"id="kynang">
+        <h2 class="title-featured">NHỮNG NGƯỜI TRUYỀN CẢM HỨNG</h2>
+      <div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="https://i.postimg.cc/httZcWGZ/image004-2.jpg" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cristiano Ronaldo</h3>
+                    <p class="product-desc">
+                        "Tôi không bao giờ nghĩ mình là người giỏi nhất, nhưng tôi luôn nỗ lực trong tâm trí rằng mình có thể trở thành người giỏi nhất."
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="https://i.postimg.cc/jdxYw15R/sddefault.jpg" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>David Goggins</h3>
+                    <p class="product-desc">
+                        "Không có lối tắt nào cả. Tất cả chỉ là quá trình rèn luyện ý chí và kỷ luật bản thân mỗi ngày, ngay cả khi bạn không muốn làm điều đó."
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="https://i.postimg.cc/pLKfwsfY/elon-musk-1637917906.jpg" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Elon Musk</h3>
+                    <p class="product-desc">
+                        "Một trong những sai lầm lớn nhất của con người là ép buộc bản thân theo đuổi một sở thích. Bạn chỉ thực sự làm tốt những gì bạn đam mê."
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="https://i.postimg.cc/QMHTXS5f/cam-hung1-14184943.jpg" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>JACK MA</h3>
+                    <p class="product-desc">
+                        "Nếu bạn không từ bỏ, bạn vẫn còn cơ hội. Từ bỏ là thất bại lớn nhất."
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="https://i.postimg.cc/GpGbJy1R/c-4-1713254418-770-width740height555.jpg" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>David Laid</h3>
+                    <p class="product-desc">
+                        "Khi bạn cảm thấy muốn bỏ cuộc, hãy nghĩ về lý do tại sao bạn bắt đầu."
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="https://i.postimg.cc/jqp2NtfM/1505187410-150518546216852-2.jpg" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Steve Jobs</h3>
+                    <p class="product-desc">
+                        Hãy cứ khát khao, hãy cứ dại khờ" (Stay hungry, stay foolish)
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="https://i.postimg.cc/90jbRsYR/nhung-cau-noi-de-doi-cua-bill-gate-2.jpg" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3i>Bill Gates</h3i></h3>
+                    <p class="product-desc">
+                        "Nếu bạn sinh ra trong nghèo khó, đó không phải là lỗi của bạn. Nhưng nếu bạn chết trong nghèo khó, đó là lỗi của bạn."
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cri</h3>
+                    <p class="product-desc">
+                        "T
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cri</h3>
+                    <p class="product-desc">
+                        "T
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cri</h3>
+                    <p class="product-desc">
+                        "T
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cri</h3>
+                    <p class="product-desc">
+                        "T
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-cao-cap"></span>
+                    <img src="" alt="iQOO 15" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>Cri</h3>
+                    <p class="product-desc">
+                        "T
+                    </p>
+                   
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <span class="product-badge badge-trung-binh"></span>
+                    <img src="k" alt="iQOO Z9 Turbo Plus" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3>iQOO Z9 Turbo Plus</h3>
+                    <p class="product-desc">
+                        kk
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- ✅ PHẦN ĐĂNG ẢNH, LIKE & BÌNH LUẬN - MỚI THÊM -->
     <section class="products" style="background-color: #0a0a0c;">
